@@ -13,7 +13,7 @@ from model import SourceModel,TargetModel
 from resample import create_named_schedule_sampler
 from respace import SpacedDiffusion,space_timesteps
 
-from train import TrainLoop, plot_loss
+from train_util import TrainLoop, plot_loss
 import diffusion
 
 def create_gaussian_diffusion(
