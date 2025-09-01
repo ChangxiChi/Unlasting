@@ -70,4 +70,4 @@ python train_mask_model.py
 ```
 
 ## Evaluation
-See 📁 [`test.py`](./test.py) for details.
+See 📁 [`test_mask_model.py`](./test_mask_model.py) and 📁 [`test.py`](./test.py) for details.
