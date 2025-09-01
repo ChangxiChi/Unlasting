@@ -152,6 +152,12 @@ with torch.no_grad():
 
 
     elif args_train.pert_type=="molecular":
+        if pred_ood:
+            test_cells = pert_data.adata[pert_data.adata.obs['unlasting_split'] == 'ood']
+
+        else:
+            test_cells = pert_data.adata[pert_data.adata.obs['unlasting_split'] == 'test']
+
         test_smiles = list(test_cells.obs['SMILES'].unique())
 
         for smiles in tqdm(test_smiles, desc="Unseen drug covariate conditions"):
